@@ -1,0 +1,30 @@
+.gallery-images {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(3,1fr)
+}
+.gallery-images__item {
+    overflow: hidden;
+    border-radius: 1.25rem
+}
+.gallery-images__item img {
+    border-radius: 1.25rem;
+    transition: scale .3s ease-in-out
+}
+@media (max-width:47.99875em) {
+    .gallery-images {
+        gap: 1rem;
+        grid-template-columns: repeat(2,1fr)
+    }
+    .gallery-images__item {
+        border-radius: 1rem
+    }
+    .gallery-images__item img {
+        border-radius: 1rem
+    }
+}
+@media (any-hover:hover) {
+    .gallery-images__item:hover img {
+        scale: 1.05
+    }
+}

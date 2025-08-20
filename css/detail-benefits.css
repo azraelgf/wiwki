@@ -1,0 +1,40 @@
+.detail-benefits_top {
+    margin-top: 4.375rem
+}
+.detail-benefits__title {
+    margin-bottom: 3.75rem
+}
+.detail-benefits__list {
+    display: grid;
+    gap: 1.25rem;
+    justify-content: space-between;
+    grid-template-columns: repeat(4,1fr);
+    padding-left: 1.25rem
+}
+.detail-benefits__list li {
+    list-style: disc
+}
+@media (min-width:29.99875em) {
+    .detail-benefits__list li {
+        font-weight: 600
+    }
+}
+@media (max-width:61.99875em) {
+    .detail-benefits__list {
+        grid-template-columns: repeat(3,1fr)
+    }
+}
+@media (max-width:47.99875em) {
+    .detail-benefits_top {
+        margin-top: 2rem
+    }
+    .detail-benefits__list {
+        gap: .625rem 1.25rem;
+        grid-template-columns: repeat(2,1fr)
+    }
+}
+@media (max-width:29.99875em) {
+    .detail-benefits__title {
+        margin-bottom: 1.5rem
+    }
+}

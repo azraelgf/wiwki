@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Контакты</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/common.css?_v=1.0">
+	<link rel="stylesheet" href="css/breadcrumbs.css?_v=1.0">>
+	<link rel="stylesheet" href="css/header.css?_v=1.0">
+	<link rel="stylesheet" href="css/footer.css?_v=1.0">
+	<link rel="stylesheet" href="css/popup.css?_v=1.0">
+	<link rel="stylesheet" href="css/form.css?_v=1.0">
+	<link rel="stylesheet" href="css/dark-block.css?_v=1.0">
+	<link rel="stylesheet" href="css/feedback.css?_v=1.0">
+	<link rel="stylesheet" href="css/spollers.css?_v=1.0">
+	<link rel="stylesheet" href="css/contacts.css?_v=1.0">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20250820112822" type="text/javascript"></script>
+	<!--	 <style>body{opacity: 0;}</style>-->
+	<style>
+		/* Начальное состояние */
+		body {
+			opacity: 0;
+			transition: opacity 0.5s ease-in-out;
+		}
+
+		/* Класс, добавляемый после загрузки */
+		html.loaded body {
+			opacity: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__top top-header">
+				<div class="top-header__container">
+					<div class="top-header__left">
+						<a href="/" class="top-header__logo logo">
+							<img class="logo__img logo__img_dark" src="img/logo.svg" alt="Logo">
+							<img class="logo__img logo__img_light" src="img/logo_w.svg" alt="Logo">
+						</a>
+						<div class="top-header__loc">
+							<div class="loc-header">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#location"></use>
+								</svg>
+								<div class="loc-header__text">
+									Минская область, <br>
+									Узденский район, д.Загорщина,
+								</div>
+							</div>
+						</div>
+						<div class="top-header__links">
+							<div class="top-header__link">
+								<button class="top-header__link-btn" data-popup="#map-pop">Как добраться ?</button>
+							</div>
+							<div class="top-header__link top-header__link_sub ">
+								<button class="top-header__link-btn" type="button">
+									<span>Режим работы:</span>
+									<svg>
+										<use xlink:href="img/icons/icons.svg#dropdown"></use>
+									</svg>
+								</button>
+								<div class="sublink">
+									<div class="sublink__title">Режим работы</div>
+									<div class="sublink__item">
+										<span>Пн - Вскр:</span>
+										<strong>Круглосуточно</strong>
+									</div>
+									<div class="sublink__item">
+										<span>Прием заказов по телефонам:</span>
+										<strong>Круглосуточно</strong>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="top-header__right">
+						<div class="top-header__search search-header">
+							<form action="#">
+								<div class="search-header__inner">
+									<button class="search-header__btn" type="submit">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#search"></use>
+										</svg>
+									</button>
+									<input class="input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск ....">
+								</div>
+							</form>
+						</div>
+						<div class="top-header__links">
+							<div class="top-header__link top-header__link_sub ">
+								<button class="top-header__link-btn" type="button">
+									<span>+375 (29) 186-55-55</span>
+									<svg>
+										<use xlink:href="img/icons/icons.svg#dropdown"></use>
+									</svg>
+								</button>
+								<div class="sublink sublink_tel">
+									<div class="sublink__title">Телефоны</div>
+									<div class="sublink__item">
+										<a href="tel:+375291865555">+375 (29) 186-55-55</a>
+										<a href="tel:+375293147503">+375 (29) 314-75-03</a>
+									</div>
+									<div class="sublink__item">
+										<span>Для корпоративного отдыха</span>
+										<a href="tel:+375291730405">+375 (29) 173-04-05</a>
+									</div>
+								</div>
+							</div>
+							<div class="top-header__messengers">
+								<div class="messengers">
+									<a href="" class="messengers__item messengers__item_tg">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#tg"></use>
+										</svg>
+									</a>
+									<a href="" class="messengers__item messengers__item_viber">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#viber"></use>
+										</svg>
+									</a>
+									<a href="" class="messengers__item messengers__item_wp">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#whatsapp"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<button type="button" class="menu__icon icon-menu"><span></span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom bottom-header">
+				<div class="bottom-header__container">
+					<div class="bottom-header__menu menu">
+						<nav class="menu__body">
+							<div class="menu__loc">
+								<div class="loc-header">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#location"></use>
+									</svg>
+									<div class="loc-header__text">
+										Минская область, <br>
+										Узденский район, д.Загорщина,
+									</div>
+								</div>
+								<button class="menu__loc-link" type="button">Как добраться ?</button>
+							</div>
+							<div class="menu__search search-header">
+								<form action="#">
+									<div class="search-header__inner">
+										<button class="search-header__btn" type="submit">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#search"></use>
+											</svg>
+										</button>
+										<input class="input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск ....">
+									</div>
+								</form>
+							</div>
+							<ul class="menu__list" data-spoilers="1199.98">
+								<li class="menu__item"><a href="#" class="menu__link menu__link_burger">
+										<i><span></span></i>
+										Услуги и цены
+									</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+								<li class="menu__item menu__item_has-submenu">
+									<a href="#" class="menu__link" data-spoiler>Проживание</a>
+									<ul class="has-submenu">
+										<li><a href="">Пункт 1</a></li>
+										<li><a href="">Пункт 2</a></li>
+										<li><a href="">Пункт 3</a></li>
+										<li><a href="">Пункт 4</a></li>
+										<li><a href="">Пункт 5</a></li>
+									</ul>
+								</li>
+								<li class="menu__item menu__item_has-submenu">
+									<a href="#" class="menu__link" data-spoiler>Рестораны</a>
+									<ul class="has-submenu">
+										<li><a href="">ПунктПункт 1</a></li>
+										<li><a href="">ПунктПунктПункт 2</a></li>
+										<li><a href="">ПунктПунктПунктПункт 3</a></li>
+										<li><a href="">ПунктПункт ПунктПункт 4</a></li>
+										<li><a href="">Пункт 5</a></li>
+									</ul>
+								</li>
+								<li class="menu__item menu__item_has-submenu">
+									<a href="#" class="menu__link" data-spoiler>Баня</a>
+									<ul class="has-submenu">
+										<li><a href="">Пункт 1</a></li>
+										<li><a href="">Пункт 2</a></li>
+										<li><a href="">Пункт 3</a></li>
+										<li><a href="">Пункт 4</a></li>
+										<li><a href="">Пункт 5</a></li>
+									</ul>
+								</li>
+								<li class="menu__item menu__item_has-submenu">
+									<a href="#" class="menu__link" data-spoiler>Спецпредложения</a>
+									<ul class="has-submenu">
+										<li><a href="">Пункт 1</a></li>
+										<li><a href="">Пункт 2</a></li>
+										<li><a href="">Пункт 3</a></li>
+										<li><a href="">Пункт 4</a></li>
+										<li><a href="">Пункт 5</a></li>
+									</ul>
+								</li>
+								<li class="menu__item"><a href="#" class="menu__link">Бизнес-мероприятия</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Трансфер</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+							</ul>
+							<div class="menu__work">
+								<div class="sublink">
+									<div class="sublink__title">Режим работы</div>
+									<div class="sublink__item">
+										<span>Пн - Вскр:</span>
+										<strong>Круглосуточно</strong>
+									</div>
+									<div class="sublink__item">
+										<span>Прием заказов по телефонам:</span>
+										<strong>Круглосуточно</strong>
+									</div>
+								</div>
+							</div>
+							<div class="menu__phones">
+								<div class="sublink sublink_tel">
+									<div class="sublink__title">Телефоны</div>
+									<div class="sublink__item">
+										<a href="tel:+375291865555">+375 (29) 186-55-55</a>
+										<a href="tel:+375293147503">+375 (29) 314-75-03</a>
+									</div>
+									<div class="sublink__item">
+										<span>Для корпоративного отдыха</span>
+										<a href="tel:+375291730405">+375 (29) 173-04-05</a>
+									</div>
+								</div>
+							</div>
+							<div class="menu__messengers">
+								<div class="messengers">
+									<a href="" class="messengers__item messengers__item_tg">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#tg"></use>
+										</svg>
+									</a>
+									<a href="" class="messengers__item messengers__item_viber">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#viber"></use>
+										</svg>
+									</a>
+									<a href="" class="messengers__item messengers__item_wp">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#whatsapp"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="section section_bottom">
+				<nav class="breadcrumbs">
+					<div class="breadcrumbs__container">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+							<li class="breadcrumbs__item"><span class="breadcrumbs__current">Контакты</span></li>
+						</ul>
+					</div>
+				</nav>
+				<div class="section__container">
+					<h1 class="section__title title">Контакты</h1>
+					<div class="contacts">
+						<div class="contacts__item">
+							<div class="contacts__item-title">
+								Телефоны
+							</div>
+							<div class="contacts__item-body text">
+								<div class="contacts__item-block">
+									<span>Velcome</span>
+									<strong><a href="tel:+375291865555">+375 (29) 186-55-55</a></strong>
+								</div>
+								<div class="contacts__item-block">
+									<span>Velcom, отдел по работе
+										с клиентами</span>
+									<strong><a href="tel:+375293147503">+375 (29) 314-75-03</a></strong>
+								</div>
+							</div>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__item-title">
+								Электронная почта
+							</div>
+							<div class="contacts__item-body text">
+								<div class="contacts__item-block">
+									<span>E-mail</span>
+									<strong><a href="mailto:info@shishki.info">info@shishki.info</a></strong>
+								</div>
+								<div class="contacts__item-block">
+									<span>Почта для корпоративных запросов</span>
+									<strong><a href="mailto:korporativnaya.shishki.info@yandex.ru">korporativnaya.shishki.info@yandex.ru</a></strong>
+								</div>
+							</div>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__item-title">
+								Адреса
+							</div>
+							<div class="contacts__item-body text">
+								<div class="contacts__item-block">
+									<span>Адрес офиса</span>
+									<strong>Минск, ул. Марьевская, 7А, офис 12</strong>
+								</div>
+								<div class="contacts__item-block">
+									<span>Адрес базы</span>
+									<strong>Минская область, Узденский район, д.Загорщина</strong>
+								</div>
+							</div>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__item-title">
+								Время работы
+							</div>
+							<div class="contacts__item-body text">
+								<div class="contacts__item-block">
+									<span>Пн - Вскр:</span>
+									<strong>Круглосуточно</strong>
+								</div>
+								<div class="contacts__item-block">
+									<span>Прием заказов по телефонам</span>
+									<strong>Круглосуточно</strong>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="road section section_bottom">
+				<div class="road__container">
+					<h2 class="road__title title title_h2">Как к нам добраться на&nbsp;автомобиле</h2>
+					<div class="road__address">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#location"></use>
+						</svg>
+						Наши координаты: 53.412678, 27.387478 (53°24'45.64", 27°23'14.92")
+					</div>
+					<div class="road__text text">
+						Наиболее оптимальный и правильный вариант построения маршрута предлагает Navitel, Yandex Navigator и
+						MapsMe.
+					</div>
+					<div class="road__subtitle">
+						Дорога из Минска в “Шишки”
+					</div>
+					<div data-spollers class="spollers spollers_contacts">
+						<details class="spollers__item">
+							<summary class="spollers__title"><span>1. Съедьте с кольцевой дороги на Слуцкое шоссе и продолжите движение по Слуцкой трассе.</span><i></i>
+							</summary>
+							<div class="spollers__body">
+								<div class="spollers__body-img">
+									<img class="ibg" src="img/map/01.webp" alt="Image">
+								</div>
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title"><span>2. На 55-м километре поверните направо, следуя указателю «Негорелое.Узда». Продолжите движение по данной дороге.</span><i></i>
+							</summary>
+							<div class="spollers__body">
+								<div class="spollers__body-img">
+									<img class="ibg" src="img/map/01.webp" alt="Image">
+								</div>
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title"><span>3. Через 10 км поверните налево на проселочную дорогу, следуя указателям «Загорщина» и «Шишки».</span><i></i>
+							</summary>
+							<div class="spollers__body">
+								<div class="spollers__body-img">
+									<img class="ibg" src="img/map/01.webp" alt="Image">
+								</div>
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title"><span>4. На Т-образном перекрестке поверните налево, следуя указателю «Шишки".</span><i></i>
+							</summary>
+							<div class="spollers__body">
+								<div class="spollers__body-img">
+									<img class="ibg" src="img/map/01.webp" alt="Image">
+								</div>
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title">
+								<span>5. Поверните еще раз налево, следуя указателю «Шишки".</span><i></i>
+							</summary>
+							<div class="spollers__body">
+								<div class="spollers__body-img">
+									<img class="ibg" src="img/map/01.webp" alt="Image">
+								</div>
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title"><span>6. Добро пожаловать в «Шишки" !</span><i></i></summary>
+							<div class="spollers__body">
+								<div class="spollers__body-img">
+									<img class="ibg" src="img/map/01.webp" alt="Image">
+								</div>
+							</div>
+						</details>
+					</div>
+				</div>
+			</section>
+			<section class="feedback feedback_contacts dark-block">
+				<img src="img/main/feedback/feedback-bg.webp" alt="Image" class="dark-block__bg">
+				<div class="feedback__container">
+					<div class="feedback__inner">
+						<div class="feedback__info form">
+							<h2 class="form__title title title_h2">Остались вопросы? <br>
+								Мы с&nbsp;радостью ответим </h2>
+							<div class="form__text text">
+								<p> В "Шишках" вы можете душевно отдохнуть вдвоем, с друзьями или колегами, детьми и даже с
+									домашними животными. Не&nbsp;зря говорят что "Шишки" одно из самых уютных мест в
+									Беларуси!</p>
+
+								<p>Мы с радостью ответим на все интересующие вас вопросы.</p>
+							</div>
+							<div class="form__wrapper">
+								<form action="">
+									<div class="form__inner">
+										<div class="form__row">
+											<div class="form__column">
+												<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="Ваше имя">
+											</div>
+											<div class="form__column">
+												<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="+ 375 (__) ___-__-__">
+											</div>
+											<div class="form__column">
+												<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="Ваш e-mail">
+											</div>
+										</div>
+
+										<div class="form__row">
+											<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="Введите сообщение">
+										</div>
+										<div class="form__row form__row_checkbox">
+											<div class="checkbox">
+												<input id="d_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="d_1" class="checkbox__label">
+													<span class="checkbox__text">Нажимая на кнопку, вы соглашаетесь с <a href="">договором-оферты</a> и <a href="">политикой обработки</a> и <a href="">защиты персональных данных</a>.</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="d_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="d_2" class="checkbox__label">
+													<span class="checkbox__text">Нажимая на кнопку, вы соглашаетесь на&nbsp;рассылку акционных предложений</span>
+												</label>
+											</div>
+										</div>
+										<div class="form__row">
+											<button class="form__button button" type="submit">Оставить заявку</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="feedback__map">
+					<img src="img/marque.svg" alt="Image" class="feedback__dec">
+					<div class="feedback__container">
+						<div class="map" id="map"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div id="map-pop" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+					<div class="popup__title title_h2 title">Как добраться</div>
+					<div class="popup__img">
+						<img class="ibg" src="img/main/popups/map.webp" alt="Image">
+					</div>
+					<div class="popup__text text">
+						<strong>Дорога из Минска в загородный комплекс “Шишки”</strong>
+						<ul>
+							<li>Съедьте с кольцевой дороги на&nbsp;Слуцкое шоссе и&nbsp;продолжите движение по&nbsp;слуцкой
+								трассе
+							</li>
+							<li>Через 45&nbsp;км поверните направо, следуя указателю «Узда.Негорелое». Продолжите движение по
+								данной
+								дороге.
+							</li>
+							<li>Поверните налево на проселочную дорогу, следуя указателям «Шишки» и&nbsp;«Загорщина"</li>
+							<li>На развилке поверните налево, следуя указателю «Шишки"</li>
+							<li>Поверните еще раз налево, следуя указателю «Шишки"</li>
+							<li>Добро пожаловать в «Шишки"</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="reservation" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+					<div class="form">
+						<h2 class="form__title title title_h2">
+							Забронитовать? <br>
+							Мы с&nbsp;радостью поможем вам
+						</h2>
+						<div class="form__text">
+							<p><strong> Позвольте нам сделать ваш отдых незабываемым!</strong></p>
+							<p> Оставьте свои контакты и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время.</p>
+						</div>
+						<div class="form__wrapper">
+							<form action="">
+								<div class="form__inner">
+									<div class="form__row">
+										<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="+ 375 (__) ___-__-__">
+									</div>
+									<div class="form__row">
+										<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="Ваше имя">
+									</div>
+									<div class="form__row form__row_checkbox">
+										<div class="checkbox">
+											<input id="pd_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="pd_1" class="checkbox__label">
+												<span class="checkbox__text">Нажимая на кнопку, вы соглашаетесь с <a href="">договором-оферты</a> и <a href="">политикой обработки</a> и <a href="">защиты персональных данных</a>.</span>
+											</label>
+										</div>
+										<div class="checkbox">
+											<input id="pd_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="pd_2" class="checkbox__label">
+												<span class="checkbox__text">Нажимая на кнопку, вы соглашаетесь на&nbsp;рассылку акционных предложений</span>
+											</label>
+										</div>
+									</div>
+									<div class="form__row">
+										<button class="form__button button" type="submit">Оставить заявку</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="call" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+					<div class="form">
+						<h2 class="form__title title title_h2">
+							Написать нам
+						</h2>
+						<div class="form__text">
+							Оставьте свои контакты и&nbsp;сообщение, наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время.
+						</div>
+						<div class="form__wrapper">
+							<form action="">
+								<div class="form__inner">
+									<div class="form__row">
+										<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="+ 375 (__) ___-__-__">
+									</div>
+									<div class="form__row">
+										<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="Ваше имя">
+									</div>
+									<div class="form__row form__row_checkbox">
+										<div class="checkbox">
+											<input id="cd_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="cd_1" class="checkbox__label">
+												<span class="checkbox__text">Нажимая на кнопку, вы соглашаетесь с <a href="">договором-оферты</a> и <a href="">политикой обработки</a> и <a href="">защиты персональных данных</a>.</span>
+											</label>
+										</div>
+										<div class="checkbox">
+											<input id="cd_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="cd_2" class="checkbox__label">
+												<span class="checkbox__text">Нажимая на кнопку, вы соглашаетесь на&nbsp;рассылку акционных предложений</span>
+											</label>
+										</div>
+									</div>
+									<div class="form__row">
+										<button class="form__button button" type="submit">Оставить заявку</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="footer__top top-footer">
+				<div class="top-footer__container">
+					<div class="top-footer__col">
+						<div class="top-footer__col-block">
+							<a href="/" class="top-footer__logo logo"><img src="img/logo_w.svg" alt="Logo"></a>
+							<div class="top-footer__text">Создаем теплую атмосферу
+								и&nbsp;дарим радостные эмоции
+							</div>
+						</div>
+						<div class="top-footer__messengers">
+							<div class="messengers">
+								<a href="" class="messengers__item messengers__item_tg">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#tg"></use>
+									</svg>
+								</a>
+								<a href="" class="messengers__item messengers__item_viber">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#viber"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="top-footer__contacts">
+							<a href="tel:+375291865555" class="top-footer-contact">+375 (29) 186-55-55</a>
+							<a href="tel:+375293147503" class="top-footer-contact">+375 (29) 314-75-03</a>
+							<a href="tel:+375291730405" class="top-footer-contact top-footer-contact_column">
+								<small>Для корпоративного отдыха</small>
+								+375 (29) 173-04-05
+							</a>
+						</div>
+						<a href="mailto:info@shishki.info" class="top-footer__mail">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#mail"></use>
+							</svg>
+							E-mail:info@shishki.info
+						</a>
+					</div>
+					<div class="top-footer__col" data-spoilers="479.98">
+						<div class="top-footer__title" data-spoiler>Меню</div>
+						<ul class="top-footer__menu">
+							<li><a href="">О нас</a></li>
+							<li><a href="">Блог</a></li>
+							<li><a href="">Вопрос-ответ</a></li>
+							<li><a href="">Условия оплаты</a></li>
+							<li><a href="">Галерея</a></li>
+							<li><a href="">3D-тур </a></li>
+							<li><a href="">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="top-footer__col" data-spoilers="479.98">
+						<div class="top-footer__title" data-spoiler>Услуги и цены</div>
+						<ul class="top-footer__menu">
+							<li><a href="">Проживание</a></li>
+							<li><a href="">Ресторан</a></li>
+							<li><a href="">Баня</a></li>
+							<li><a href="">Аренда беседок</a></li>
+							<li><a href="">Активный отдых</a></li>
+							<li><a href="">Корпоративы</a></li>
+							<li><a href="">Праздники</a></li>
+							<li><a href="">Свадьбы</a></li>
+							<li><a href="">Бизнес-мероприятия</a></li>
+							<li><a href="">Трансфер</a></li>
+							<li><a href="">Спецпредложения</a></li>
+						</ul>
+					</div>
+					<div class="top-footer__col" data-spoilers="479.98">
+						<div class="top-footer__col-item">
+							<div class="top-footer__title" data-spoiler>Адрес базы:</div>
+							<div class="top-footer__block">
+								<div class="top-footer__info">
+									<p>ООО «Мюзле»</p>
+									<p>
+										223412, Минская область, Узденский район, д.&nbsp;Загорщина, Республика Беларусь, Слободской
+										сельский совет
+									</p>
+									<p>
+										УНП&nbsp;692038156
+									</p>
+									<p>Режим работы: круглосуточно</p>
+								</div>
+								<button class="top-footer-contact" type="button"  data-popup="#map-pop">Как добраться ?</button>
+							</div>
+						</div>
+						<div class="top-footer__col-item">
+							<div class="top-footer__title" data-spoiler>Адрес офиса:</div>
+							<div class="top-footer__block">
+								<div class="top-footer__info">
+									<p>Минск, ул. Марьевская, 7А, офис 12</p>
+									<p>
+										Режим работы: пн-пт, 9:00-18:00
+									</p>
+									<p>
+										Email почта для корпоративных запросов: <a href="mailto:korporativnaya.shishki.info@yandex.ru">korporativnaya.shishki.info@yandex.ru</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="top-footer__col">
+						<div class="top-footer__design">
+							<div class="top-footer__design-info">
+								<div class="top-footer__design-text"> Дизайн и разработка сайта:</div>
+								<a href="" class="top-footer__design-link">Like<span>it</span>.pro</a>
+							</div>
+							<div class="top-footer__design-copy">
+								© 2024
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom bottom-footer">
+				<div class="bottom-footer__container">
+					<a href="" class="bottom-footer__link">Правила оказания услуг</a>
+					<a href="" class="bottom-footer__link">Пользовательское соглашение</a>
+					<a href="" class="bottom-footer__link">Политика конфиденциальности</a>
+					<a href="" class="bottom-footer__link">Согласие на&nbsp;обработку персональных данных</a>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<script src="js/common.js?_v=1.0"></script>
+	<script src="js/popup.js?_v=1.0"></script>
+	<script src="js/map.js?_v=1.0"></script>
+	<script src="js/spoiler.js?_v=1.0"></script>
+</body>
+
+</html>

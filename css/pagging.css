@@ -1,0 +1,61 @@
+.pagging {
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .625rem
+}
+.pagging__arrow {
+    width: 1.9375rem;
+    height: 1.9375rem;
+    border-radius: .625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000
+}
+.pagging__arrow._disabled {
+    border-color: var(--border)
+}
+.pagging__arrow svg {
+    width: .625rem;
+    height: .625rem
+}
+.pagging__arrow-prev svg {
+    rotate: 90deg
+}
+.pagging__arrow-next svg {
+    rotate: -90deg
+}
+.pagging__list {
+    display: flex;
+    gap: .625rem
+}
+.pagging__item {
+    font-size: .9375rem;
+    width: 1.9375rem;
+    height: 1.9375rem;
+    border-radius: .625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    transition: all .3s ease-in-out
+}
+.pagging__item._active {
+    border-color: var(--accent);
+    color: var(--secondary);
+    background-color: var(--accent)
+}
+@media (max-width:47.99875em) {
+    .pagging {
+        margin-top: 2rem
+    }
+}
+@media (any-hover:hover) {
+    .pagging__item:hover {
+        border-color: var(--accent);
+        color: var(--secondary);
+        background-color: var(--accent)
+    }
+}

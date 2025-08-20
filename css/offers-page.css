@@ -1,0 +1,124 @@
+.offers-page__title {
+    margin-bottom: 2.5rem
+}
+.offers-page__info {
+    margin-bottom: 3.5625rem
+}
+.offers-page__actions {
+    margin-bottom: 5rem
+}
+.offers-page__items {
+    display: grid;
+    gap: 4.5rem
+}
+.offer {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem
+}
+.offer:not(:last-child) {
+    padding-bottom: 4.5rem;
+    border-bottom: 1px solid var(--border)
+}
+.offer__img {
+    flex: 0 0 42%
+}
+.offer__img img {
+    border-radius: 1.25rem
+}
+.offer__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem
+}
+.offer__list {
+    font-weight: 300;
+    padding-left: 1.25rem;
+    margin-bottom: 2.5rem
+}
+.offer__list li {
+    list-style: disc
+}
+.offer__list li+li {
+    margin-top: .3125rem
+}
+.offer__price {
+    margin-bottom: 2.3125rem
+}
+.offer__text {
+    font-weight: 300;
+    color: var(--third);
+    margin-bottom: 3rem
+}
+@media (max-width:96.25em) {
+    .offer__title {
+        font-size: 1.625rem
+    }
+}
+@media (max-width:74.99875em) {
+    .offer {
+        align-items: flex-start
+    }
+}
+@media (max-width:61.99875em) {
+    .offers-page__title br {
+        display: none
+    }
+    .offer {
+        flex-wrap: wrap
+    }
+    .offer__img {
+        flex: 1 1 100%;
+        height: 25rem
+    }
+    .offer__title {
+        font-size: 1.5rem
+    }
+}
+@media (max-width:47.99875em) {
+    .offers-page__title {
+        margin-bottom: 1.5rem
+    }
+    .offers-page__info {
+        margin-bottom: 2rem
+    }
+    .offers-page__actions {
+        margin-bottom: 3rem
+    }
+    .offers-page__items {
+        gap: 2rem
+    }
+    .offer:not(:last-child) {
+        padding-bottom: 2rem
+    }
+    .offer {
+        gap: 1.375rem
+    }
+    .offer__body {
+        flex: 1 1 auto
+    }
+    .offer__title {
+        font-size: 1.375rem
+    }
+    .offer__list {
+        margin-bottom: 1.875rem
+    }
+    .offer__price {
+        margin-bottom: 1rem
+    }
+    .offer__text {
+        font-size: .625rem;
+        margin-bottom: 1.5rem
+    }
+}
+@media (max-width:29.99875em) {
+    .offer__img {
+        height: auto
+    }
+    .offer__img img {
+        border-radius: 1rem
+    }
+    .offer__title {
+        font-size: 1.25rem
+    }
+}

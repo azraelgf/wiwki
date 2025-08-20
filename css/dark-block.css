@@ -1,0 +1,34 @@
+.dark-block {
+    color: var(--secondary);
+    position: relative;
+    padding: 5.5rem 0;
+    background-color: var(--primary)
+}
+.dark-block::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom,rgba(36,37,40,0) 0,#242528 100%)
+}
+.dark-block__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: .1;
+    left: 0
+}
+@media (max-width:47.99875em) {
+    .dark-block {
+        padding: 3.75rem 0
+    }
+}
+@media (max-width:29.99875em) {
+    .dark-block {
+        padding: 2rem 0
+    }
+}

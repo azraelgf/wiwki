@@ -1,0 +1,136 @@
+.info-banner {
+    position: relative;
+    z-index: 10;
+    background-color: var(--accent);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .4s ease,visibility .4s ease;
+    overflow: hidden
+}
+.info-banner._hide {
+    opacity: 0;
+    visibility: hidden
+}
+.info-banner__container {
+    max-width: 64rem
+}
+.info-banner__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--secondary);
+    padding: .875rem 0
+}
+.info-banner__dec {
+    position: absolute;
+    height: 6.5rem
+}
+.info-banner__dec_left {
+    top: -1.875rem;
+    left: 0;
+    width: 9.125rem
+}
+.info-banner__dec_right {
+    bottom: -1.875rem;
+    right: 0;
+    width: 11.5625rem
+}
+.info-banner__text {
+    font-weight: 600;
+    line-height: 130%;
+    font-size: 1.25rem;
+    padding: 0 2rem 0 1.25rem
+}
+.info-banner__close {
+    z-index: 2;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    top: 50%;
+    right: 0;
+    translate: 0 -50%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.info-banner__close svg {
+    width: .75rem;
+    height: .75rem
+}
+@media (min-width:29.99875em) {
+    .info-banner__text_mob {
+        display: none
+    }
+}
+@media (min-width:47.99875em) {
+    .info-banner__inner {
+        text-align: center
+    }
+}
+@media (min-width:74.99875em) {
+    .info-banner__inner {
+        min-height: 4.75rem
+    }
+}
+@media (min-width:96.25em) {
+    .info-banner__container {
+        max-width: 75rem
+    }
+}
+@media (max-width:96.25em) {
+    .info-banner__dec_left {
+        left: -2%;
+        width: 5.25rem
+    }
+    .info-banner__dec_right {
+        right: -5%;
+        width: 9.0625rem
+    }
+    .info-banner__text {
+        font-size: 1.125rem
+    }
+}
+@media (max-width:74.99875em) {
+    .info-banner__dec_left {
+        left: -2.5rem;
+        width: 5.25rem
+    }
+    .info-banner__dec_right {
+        bottom: -3.125rem;
+        right: -5rem
+    }
+    .info-banner__text {
+        padding: 0 3.75rem
+    }
+    .info-banner__close {
+        top: 1rem;
+        right: 0
+    }
+}
+@media (max-width:47.99875em) {
+    .info-banner__dec_right {
+        width: 7.8125rem
+    }
+    .info-banner__text {
+        font-size: 1rem
+    }
+}
+@media (max-width:35.99875em) {
+    .info-banner__text {
+        font-size: .875rem;
+        padding: 0 2.5rem
+    }
+}
+@media (max-width:29.99875em) {
+    .info-banner__dec_left {
+        left: -3.125rem;
+        top: -2.5rem
+    }
+    .info-banner__text {
+        padding: 0 1.875rem
+    }
+    .info-banner__text_pk {
+        display: none
+    }
+}

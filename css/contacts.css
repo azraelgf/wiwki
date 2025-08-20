@@ -1,0 +1,89 @@
+.contacts {
+    display: flex;
+    gap: 1.25rem
+}
+.contacts__item {
+    flex: 1 1 25%
+}
+.contacts__item a[href^=mailto] {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    display: inline-block
+}
+.contacts__item-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem
+}
+.contacts__item-block {
+    display: grid;
+    gap: .625rem
+}
+.contacts__item-block+.contacts__item-block {
+    margin-top: 1.5rem
+}
+.road__subtitle {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem
+}
+.road__title {
+    margin-bottom: 3rem
+}
+.road__address {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    gap: .5rem;
+    margin-bottom: 1.875rem
+}
+.road__address svg {
+    flex: 0 0 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem
+}
+.road__text {
+    margin-bottom: 3.5rem
+}
+@media (max-width:74.99875em) {
+    .contacts {
+        flex-wrap: wrap
+    }
+    .contacts__item {
+        flex: 1 1 auto
+    }
+}
+@media (max-width:61.99875em) {
+    .contacts__item {
+        flex: 1 1 46%
+    }
+    .contacts__item-title {
+        font-size: 1.25rem
+    }
+}
+@media (max-width:47.99875em) {
+    .contacts__item-title {
+        font-size: 1.125rem
+    }
+    .road__subtitle {
+        font-size: 1.125rem
+    }
+    .road__title {
+        margin-bottom: 1.5rem
+    }
+    .road__address {
+        margin-bottom: .9375rem
+    }
+    .road__text {
+        margin-bottom: 2rem
+    }
+}
+@media (max-width:29.99875em) {
+    .contacts__item-title {
+        font-size: 1rem;
+        margin-bottom: 1.25rem
+    }
+    .contacts__item-block+.contacts__item-block {
+        margin-top: 1.25rem
+    }
+}

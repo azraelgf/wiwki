@@ -1,0 +1,34 @@
+.main-swiper__slide-img img {
+    border-radius: 1.25rem
+}
+.thumbs-swiper__slide {
+    cursor: pointer;
+    opacity: .6;
+    transition: opacity .3s ease-in-out
+}
+.thumbs-swiper__slide.swiper-slide-thumb-active {
+    opacity: 1
+}
+.thumbs-swiper__slide-img img {
+    border-radius: .625rem
+}
+@media (min-width:47.99875em) {
+    .main-swiper {
+        margin-bottom: 1.25rem
+    }
+}
+@media (max-width:61.99875em) {
+    .main-swiper__slide-img img {
+        max-height: 25rem
+    }
+}
+@media (max-width:47.99875em) {
+    .thumbs-swiper {
+        display: none
+    }
+}
+@media (max-width:29.99875em) {
+    .main-swiper__slide-img img {
+        border-radius: 1rem
+    }
+}

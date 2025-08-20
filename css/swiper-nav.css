@@ -1,0 +1,52 @@
+.swiper-pagination {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: .5rem
+}
+.swiper-pagination-bullet {
+    width: .625rem;
+    height: .625rem;
+    border-radius: 50%;
+    border: 1px solid var(--accent);
+    transition: background-color .3s ease-in-out
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--accent)
+}
+.swiper-controls {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    translate: 0 -50%;
+    pointer-events: none
+}
+.swiper-button {
+    pointer-events: auto;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%
+}
+.swiper-button svg {
+    width: .75rem;
+    height: .75rem
+}
+.swiper-button-prev {
+    rotate: 90deg
+}
+.swiper-button-next {
+    rotate: -90deg
+}
+@media (min-width:47.99875em) {
+    .swiper-pagination {
+        display: none
+    }
+}
+@media (max-width:47.99875em) {
+    .swiper-controls {
+        display: none
+    }
+}

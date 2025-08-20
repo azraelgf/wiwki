@@ -1,0 +1,14 @@
+.exercises-page__title {
+    margin-bottom: 2.5rem
+}
+.exercises-page__text {
+    margin-bottom: 4.375rem
+}
+@media (max-width:47.99875em) {
+    .exercises-page__title {
+        margin-bottom: 1.5rem
+    }
+    .exercises-page__text {
+        margin-bottom: 3rem
+    }
+}

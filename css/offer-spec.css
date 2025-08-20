@@ -1,0 +1,27 @@
+.offers-spec__title {
+    margin-bottom: 3.125rem
+}
+.offers-spec__text {
+    margin-bottom: 3.0625rem
+}
+.offers-spec__items {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.25rem
+}
+@media (max-width:74.99875em) {
+    .offers-spec__items {
+        grid-template-columns: repeat(3,1fr)
+    }
+}
+@media (max-width:47.99875em) {
+    .offers-spec__title {
+        margin-bottom: 1.5rem
+    }
+    .offers-spec__text {
+        margin-bottom: 2rem
+    }
+    .offers-spec__items {
+        grid-template-columns: repeat(2,1fr)
+    }
+}

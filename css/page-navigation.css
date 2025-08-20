@@ -1,0 +1,59 @@
+.page-navigation {
+    margin-top: 2.5rem
+}
+.page-navigation__list {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    padding-bottom: .3125rem
+}
+.page-navigation_reviews .page-navigation__list ,.page-navigation_blog .page-navigation__list{
+    gap: 0
+}
+.page-navigation__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .625rem 1.25rem;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: .9375rem;
+    min-height: 3.75rem;
+    min-width: 8.75rem;
+    border-radius: .625rem;
+    border: 1px solid var(--border);
+    transition: background-color .3s ease-in-out,color .3s ease-in-out
+}
+.page-navigation_reviews .page-navigation__link,.page-navigation_blog .page-navigation__link{
+    min-width: 6.25rem;
+    border: none
+}
+._active .page-navigation__link {
+    background-color: var(--accent);
+    color: var(--secondary)
+}
+@media (max-width:47.99875em) {
+    .page-navigation {
+        margin-top: 1.5rem
+    }
+    .page-navigation__list {
+        gap: 1rem
+    }
+    .page-navigation_reviews .page-navigation__list,.page-navigation_blog .page-navigation__list{
+        gap: 0
+    }
+}
+@media (max-width:29.99875em) {
+    .page-navigation__link {
+        font-size: .75rem;
+        font-weight: 700;
+        min-height: 2.5rem;
+        min-width: 6.25rem
+    }
+}
+@media (any-hover:hover) {
+    .page-navigation__link:hover {
+        background-color: var(--accent);
+        color: var(--secondary)
+    }
+}

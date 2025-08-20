@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Корпоративные мероприятия</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/common.css?_v=1.0">
+	<link rel="stylesheet" href="css/breadcrumbs.css?_v=1.0">>
+	<link rel="stylesheet" href="css/header.css?_v=1.0">
+	<link rel="stylesheet" href="css/footer.css?_v=1.0">
+	<link rel="stylesheet" href="css/popup.css?_v=1.0">
+	<link rel="stylesheet" href="css/form.css?_v=1.0">
+	<link rel="stylesheet" href="css/swiper.css?_v=1.0">
+	<link rel="stylesheet" href="css/arrow-slider.css?_v=1.0">
+	<link rel="stylesheet" href="css/swiper-nav.css?_v=1.0">
+	<link rel="stylesheet" href="css/spollers.css?_v=1.0">
+	<link rel="stylesheet" href="css/exercise.css?_v=1.0">
+	<link rel="stylesheet" href="css/detail-benefits.css?_v=1.0">
+	<link rel="stylesheet" href="css/rest-det.css?_v=1.0">
+	<link rel="stylesheet" href="css/corporate.css?_v=1.0">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--	 <style>body{opacity: 0;}</style>-->
+	<style>
+		/* Начальное состояние */
+		body {
+			opacity: 0;
+			transition: opacity 0.5s ease-in-out;
+		}
+
+		/* Класс, добавляемый после загрузки */
+		html.loaded body {
+			opacity: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__top top-header">
+				<div class="top-header__container">
+					<div class="top-header__left">
+						<a href="/" class="top-header__logo logo">
+							<img class="logo__img logo__img_dark" src="img/logo.svg" alt="Logo">
+							<img class="logo__img logo__img_light" src="img/logo_w.svg" alt="Logo">
+						</a>
+						<div class="top-header__loc">
+							<div class="loc-header">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#location"></use>
+								</svg>
+								<div class="loc-header__text">
+									Минская область, <br>
+									Узденский район, д.Загорщина,
+								</div>
+							</div>
+						</div>
+						<div class="top-header__links">
+							<div class="top-header__link">
+								<button class="top-header__link-btn" data-popup="#map-pop">Как добраться ?</button>
+							</div>
+							<div class="top-header__link top-header__link_sub ">
+								<button class="top-header__link-btn" type="button">
+									<span>Режим работы:</span>
+									<svg>
+										<use xlink:href="img/icons/icons.svg#dropdown"></use>
+									</svg>
+								</button>
+								<div class="sublink">
+									<div class="sublink__title">Режим работы</div>
+									<div class="sublink__item">
+										<span>Пн - Вскр:</span>
+										<strong>Круглосуточно</strong>
+									</div>
+									<div class="sublink__item">
+										<span>Прием заказов по телефонам:</span>
+										<strong>Круглосуточно</strong>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="top-header__right">
+						<div class="top-header__search search-header">
+							<form action="#">
+								<div class="search-header__inner">
+									<button class="search-header__btn" type="submit">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#search"></use>
+										</svg>
+									</button>
+									<input class="input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск ....">
+								</div>
+							</form>
+						</div>
+						<div class="top-header__links">
+							<div class="top-header__link top-header__link_sub ">
+								<button class="top-header__link-btn" type="button">
+									<span>+375 (29) 186-55-55</span>
+									<svg>
+										<use xlink:href="img/icons/icons.svg#dropdown"></use>
+									</svg>
+								</button>
+								<div class="sublink sublink_tel">
+									<div class="sublink__title">Телефоны</div>
+									<div class="sublink__item">
+										<a href="tel:+375291865555">+375 (29) 186-55-55</a>
+										<a href="tel:+375293147503">+375 (29) 314-75-03</a>
+									</div>
+									<div class="sublink__item">
+										<span>Для корпоративного отдыха</span>
+										<a href="tel:+375291730405">+375 (29) 173-04-05</a>
+									</div>
+								</div>
+							</div>
+							<div class="top-header__messengers">
+								<div class="messengers">
+									<a href="" class="messengers__item messengers__item_tg">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#tg"></use>
+										</svg>
+									</a>
+									<a href="" class="messengers__item messengers__item_viber">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#viber"></use>
+										</svg>
+									</a>
+									<a href="" class="messengers__item messengers__item_wp">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#whatsapp"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<button type="button" class="menu__icon icon-menu"><span></span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom bottom-header">
+				<div class="bottom-header__container">
+					<div class="bottom-header__menu menu">
+						<nav class="menu__body">
+							<div class="menu__loc">
+								<div class="loc-header">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#location"></use>
+									</svg>
+									<div class="loc-header__text">
+										Минская область, <br>
+										Узденский район, д.Загорщина,
+									</div>
+								</div>
+								<button class="menu__loc-link" type="button">Как добраться ?</button>
+							</div>
+							<div class="menu__search search-header">
+								<form action="#">
+									<div class="search-header__inner">
+										<button class="search-header__btn" type="submit">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#search"></use>
+											</svg>
+										</button>
+										<input class="input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск ....">
+									</div>
+								</form>
+							</div>
+							<ul class="menu__list" data-spoilers="1199.98">
+								<li class="menu__item"><a href="#" class="menu__link menu__link_burger">
+										<i><span></span></i>
+										Услуги и цены
+									</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+								<li class="menu__item menu__item_has-submenu">
+									<a href="#" class="menu__link" data-spoiler>Проживание</a>
+									<ul class="has-submenu">
+										<li><a href="">Пункт 1</a></li>
+										<li><a href="">Пункт 2</a></li>
+										<li><a href="">Пункт 3</a></li>
+										<li><a href="">Пункт 4</a></li>
+										<li><a href="">Пункт 5</a></li>
+									</ul>
+								</li>
+								<li class="menu__item menu__item_has-submenu">
+									<a href="#" class="menu__link" data-spoiler>Рестораны</a>
+									<ul class="has-submenu">
+										<li><a href="">ПунктПункт 1</a></li>
+										<li><a href="">ПунктПунктПункт 2</a></li>
+										<li><a href="">ПунктПунктПунктПункт 3</a></li>
+										<li><a href="">ПунктПункт ПунктПункт 4</a></li>
+										<li><a href="">Пункт 5</a></li>
+									</ul>
+								</li>
+								<li class="menu__item menu__item_has-submenu">
+									<a href="#" class="menu__link" data-spoiler>Баня</a>
+									<ul class="has-submenu">
+										<li><a href="">Пункт 1</a></li>
+										<li><a href="">Пункт 2</a></li>
+										<li><a href="">Пункт 3</a></li>
+										<li><a href="">Пункт 4</a></li>
+										<li><a href="">Пункт 5</a></li>
+									</ul>
+								</li>
+								<li class="menu__item menu__item_has-submenu">
+									<a href="#" class="menu__link" data-spoiler>Спецпредложения</a>
+									<ul class="has-submenu">
+										<li><a href="">Пункт 1</a></li>
+										<li><a href="">Пункт 2</a></li>
+										<li><a href="">Пункт 3</a></li>
+										<li><a href="">Пункт 4</a></li>
+										<li><a href="">Пункт 5</a></li>
+									</ul>
+								</li>
+								<li class="menu__item"><a href="#" class="menu__link">Бизнес-мероприятия</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Трансфер</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+							</ul>
+							<div class="menu__work">
+								<div class="sublink">
+									<div class="sublink__title">Режим работы</div>
+									<div class="sublink__item">
+										<span>Пн - Вскр:</span>
+										<strong>Круглосуточно</strong>
+									</div>
+									<div class="sublink__item">
+										<span>Прием заказов по телефонам:</span>
+										<strong>Круглосуточно</strong>
+									</div>
+								</div>
+							</div>
+							<div class="menu__phones">
+								<div class="sublink sublink_tel">
+									<div class="sublink__title">Телефоны</div>
+									<div class="sublink__item">
+										<a href="tel:+375291865555">+375 (29) 186-55-55</a>
+										<a href="tel:+375293147503">+375 (29) 314-75-03</a>
+									</div>
+									<div class="sublink__item">
+										<span>Для корпоративного отдыха</span>
+										<a href="tel:+375291730405">+375 (29) 173-04-05</a>
+									</div>
+								</div>
+							</div>
+							<div class="menu__messengers">
+								<div class="messengers">
+									<a href="" class="messengers__item messengers__item_tg">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#tg"></use>
+										</svg>
+									</a>
+									<a href="" class="messengers__item messengers__item_viber">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#viber"></use>
+										</svg>
+									</a>
+									<a href="" class="messengers__item messengers__item_wp">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#whatsapp"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="section corporate section_bottom">
+				<nav class="breadcrumbs">
+					<div class="breadcrumbs__container">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+							<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Услуги и цены</a></li>
+							<li class="breadcrumbs__item"><span class="breadcrumbs__current">Свадьбы</span></li>
+						</ul>
+					</div>
+				</nav>
+				<div class="corporate__container">
+					<h1 class="corporate__title title">Место для проведения свадьбы с фишкой от "Шишек"</h1>
+					<div class="corporate__info text_xl text">
+						Загородный комплекс Шишки считается одним из лучших мест для проведения свадьбы. И вот почему:
+						атмосферная территория, удобные номера, по-домашнему вкусная еда и различные локации под любой
+						бюджет. Именно поэтому свадебный сезон у нас не заканчивается.
+					</div>
+					<div class="corporate__actions btn-group">
+						<button class="btn-group__btn button button_shadow" type="button" data-popup="#reservation">
+							Забронировать
+						</button>
+						<a href="" class="btn-group__btn button button_outline">Узнать стоимость</a>
+					</div>
+
+				</div>
+			</section>
+
+			<section class="section teambuilding section_bottom">
+				<div class="teambuilding__slider slider-arrow">
+					<div class="swiper-controls">
+						<button type="button" class="swiper-button swiper-button-prev">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#dropdown"></use>
+							</svg>
+						</button>
+						<button type="button" class="swiper-button swiper-button-next">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#dropdown"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="slider-arrow__container">
+						<div class="rest-detail__body swiper">
+							<div class="rest-detail__wrapper swiper-wrapper">
+								<div class="rest-detail__slide swiper-slide">
+									<div class="rest-detail-item">
+										<picture>
+											<source media="(min-width: 479.98px)" srcset="img/services/marries/01.webp">
+											<img class="ibg" src="img/services/marries/01_m.webp" alt="Image">
+										</picture>
+
+									</div>
+								</div>
+								<div class="rest-detail__slide swiper-slide">
+									<div class="rest-detail-item">
+										<picture>
+											<source media="(min-width: 479.98px)" srcset="img/rest/detail/01.webp">
+											<img class="ibg" src="img/rest/detail/01_m.webp" alt="Image">
+										</picture>
+
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+				<div class="teambuilding__container">
+					<h2 class="teambuilding__title title title_h2">Загородный комплекс для проведения свадьбы</h2>
+					<div class="teambuilding__info text">
+						<p> Мы прекрасно понимаем, как сложно иногда придумать свою идеальную свадьбу, поэтому готовы
+							предложить
+							свою помощь. Как вариант, устроить <strong>выездную регистрацию на пирсе озера Лоша или в
+								современной
+								ротонде</strong>, пригласить родных на банкет в загородный ресторан или организовать
+							развлекательную
+							программу в летнем шатре. А если вдруг погода испортится, то мы с легкостью переместим свадьбу в
+							закрытый отапливаемый Гео купол.</p>
+
+						<p> Для проведения «свадьбы мечты» мы предоставим все необходимое: предоставим площадку в любом
+							месте на
+							территории, приготовим любимые блюда на ваш вкус, встретим гостей приветственным фуршетом, а
+							после
+							мероприятия проводим их в комфортные номера.</p>
+
+						<p><strong> В зависимости от бюджета, можно согласовать частичную аренду комплекса или полное
+								закрытие только
+								для вашей компании.</strong></p>
+
+						<ul>
+							<li>
+								До 70 гостей - Размещение на ночлег
+							</li>
+							<li>
+								До 90 гостей - Вместимость Ресторана за городом Шишки
+							</li>
+							<li>
+								До 100 гостей - Вместимость Летнего шатра
+							</li>
+							<li>
+								До 150 гостей - Вместимость Гео купола (фуршетный формат - до 300 гостей)
+							</li>
+						</ul>
+
+						<p> В случае, если итоговая цена на проведение свадьбы окажется больше запланированого бюджета, то
+							решением станет персональное предложение в рамках бюджета для самых требовательных невест.</p>
+
+						<p><strong>Опыт сотрудничества со многими подрядчиками позволяет рекомендовать лучших из
+								event-индустрии</strong>.
+							Совместно мы подберем трансфер из любой точки и на любое количество гостей, развлекательную
+							программу, свадебного организатора и ведущего, специалистов фото- видеосъемки, визажистов и
+							декораторов (услуги сторонних сотрудников оплачиваются отдельно).</p>
+
+						<p> Для предоставления информации по стоимость вашей свадьбы, нам нужно:</p>
+						<ul class="teambuilding__list">
+							<li>
+								чтобы Вы обязательно приехали в Загородный комплекс и посмотрели все наши локации (или
+								прогулялись по 3D туру)
+							</li>
+							<li>
+								знать дату мероприятия и продолжительность
+							</li>
+							<li>
+								знать приблизительное количество гостей
+							</li>
+							<li>
+								рассказать нам, как Вы хотели бы провести этот день
+							</li>
+						</ul>
+						<div class="text-accent">
+							<svg class="text-accent__icon">
+								<use xlink:href="img/icons/icons.svg#reservation"></use>
+							</svg>
+							<div class="text-accent__text">Все вопросы вы можете задать по телефонам отдела бронирования : +375 (29) 186-55-55
+								<br>
+								+375 (29) 314-75-03
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="teambuilding__slider slider-arrow">
+					<div class="swiper-controls">
+						<button type="button" class="swiper-button swiper-button-prev">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#dropdown"></use>
+							</svg>
+						</button>
+						<button type="button" class="swiper-button swiper-button-next">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#dropdown"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="slider-arrow__container">
+						<div class="rest-detail__body swiper">
+							<div class="rest-detail__wrapper swiper-wrapper">
+								<div class="rest-detail__slide swiper-slide">
+									<div class="rest-detail-item">
+										<picture>
+											<source media="(min-width: 479.98px)" srcset="img/corporate/slider/01.webp">
+											<img class="ibg" src="img/corporate/slider/01_m.webp" alt="Image">
+										</picture>
+
+									</div>
+								</div>
+								<div class="rest-detail__slide swiper-slide">
+									<div class="rest-detail-item">
+										<picture>
+											<source media="(min-width: 479.98px)" srcset="img/rest/detail/01.webp">
+											<img class="ibg" src="img/rest/detail/01_m.webp" alt="Image">
+										</picture>
+
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+				<div class="detail-call">
+					<div class="section__container">
+						<div class="detail-call__inner">
+							<h2 class="detail-call__title title_h2 title">Начнем диалог?</h2>
+							<div class="detail-call__text text">Для этого укажите ключевые моменты. Мы озвучим стандартные
+								тарифы и предложим оптимальное решение для вашего бюджета
+							</div>
+							<button class="detail-call__btn button" type="button" data-popup="#call">Оставить заявку
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="detail-benefits detail-benefits_top">
+					<div class="detail-benefits__container">
+						<div class="detail-benefits__inner">
+							<h2 class="detail-benefits__title title_h2 title">Преимущества</h2>
+							<ul class="detail-benefits__list text text_xl">
+								<li>Панорамный шатер на 100 человек на берегу озера</li>
+								<li>Ресторан на 90 посадочных мест: старобелорусская и европейская кухни</li>
+								<li>Ротонда в современном стиле для выездной регистрации на берегу озера</li>
+								<li>Шишки парк - активный парк отдыха на 7 гектарах земли</li>
+								<li>Возможность бронирования комплекса целиком</li>
+								<li>Возможность расселения до 70 человек на территории комплекса</li>
+								<li>Печи «Бронислава», «Змей Горыныч» для приготовления блюд на свежем воздухе</li>
+								<li>Закрытый, отапливаемый геокупол шатер на 150 человек</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section_bottom">
+				<div class="section__container">
+					<div class="section__top">
+						<h2 class="section__title title_h2 title">Локации на территории Шишки</h2>
+						<div class="section__text text">На 9 гектарах земли расположились различные локации, чтобы каждый гость смог найти отдых для своей души. Мы предлагаем не просто досуг в традиционном понимании, а душевное времяпрепровождение.
+						</div>
+					</div>
+					<div class="exercises-items">
+						<div class="exercises-items__body swiper">
+							<div class="exercises-items__wrapper swiper-wrapper">
+								<div class="exercises-items__slide swiper-slide">
+									<div class="exercise">
+										<img src="img/services/marries/loc/01.webp" alt="Image" class="ibg">
+										<div class="exercise__content">
+											<div class="exercise__title">Ротонда</div>
+											<div class="exercise__price">Выездная регистрация брака</div>
+										</div>
+									</div>
+								</div>
+								<div class="exercises-items__slide swiper-slide">
+									<div class="exercise">
+										<img src="img/services/marries/loc/02.webp" alt="Image" class="ibg">
+										<div class="exercise__content">
+											<div class="exercise__title">Геокупол</div>
+											<div class="exercise__price">До 150 гостей (фуршет формат - до 300)</div>
+										</div>
+									</div>
+								</div>
+								<div class="exercises-items__slide swiper-slide">
+									<div class="exercise">
+										<img src="img/services/marries/loc/03.webp" alt="Image" class="ibg">
+										<div class="exercise__content">
+											<div class="exercise__title">Летний шатер</div>
+											<div class="exercise__price">До 100 гостей</div>
+										</div>
+									</div>
+								</div>
+								<div class="exercises-items__slide swiper-slide">
+									<div class="exercise">
+										<img src="img/services/marries/loc/04.webp" alt="Image" class="ibg">
+										<div class="exercise__content">
+											<div class="exercise__title">Иглу</div>
+											<div class="exercise__price">Камерная свадьба до 10 человек</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+						<a href="" class="exercises-items__more button button_outline button_fw">Подробнее о всех
+							услугах</a>
+					</div>
+				</div>
+			</section>
+			<section class="faq section section_bottom ">
+				<div class="faq__container">
+					<h2 class="faq__title title title_h2">Вопросы и ответы</h2>
+					<div data-spollers class="spollers">
+						<details class="spollers__item">
+							<summary class="spollers__title text text_xl">
+								<span>Какие услуги включены в аренду комплекса?</span><i></i>
+							</summary>
+							<div class="spollers__body text">В аренду комплекса включены проживание, пользование
+								инфраструктурой
+								(бассейн, спортивные площадки и т.д.), Wi-Fi, парковка и базовое обслуживание.
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title text text_xl"><span>Есть ли возможность организации питания на территории комплекса?</span><i></i>
+							</summary>
+							<div class="spollers__body text">В аренду комплекса включены проживание, пользование
+								инфраструктурой
+								(бассейн, спортивные площадки и т.д.), Wi-Fi, парковка и базовое обслуживание.
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title text text_xl"><span>Какие дополнительные услуги доступны для гостей (например, экскурсии, спортивные мероприятия)?</span><i></i>
+							</summary>
+							<div class="spollers__body text">В аренду комплекса включены проживание, пользование
+								инфраструктурой
+								(бассейн, спортивные площадки и т.д.), Wi-Fi, парковка и базовое обслуживание.
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title text text_xl">
+								<span>Каковы правила бронирования и отмены аренды?</span><i></i>
+							</summary>
+							<div class="spollers__body text">В аренду комплекса включены проживание, пользование
+								инфраструктурой
+								(бассейн, спортивные площадки и т.д.), Wi-Fi, парковка и базовое обслуживание.
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title text text_xl"><span>Есть ли на территории комплексы места для активного отдыха (например, бассейн, спортивные площадки)?</span><i></i>
+							</summary>
+							<div class="spollers__body text">В аренду комплекса включены проживание, пользование
+								инфраструктурой
+								(бассейн, спортивные площадки и т.д.), Wi-Fi, парковка и базовое обслуживание.
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title text text_xl"><span>Возможно ли размещение с домашними животными?</span><i></i>
+							</summary>
+							<div class="spollers__body text">В аренду комплекса включены проживание, пользование
+								инфраструктурой
+								(бассейн, спортивные площадки и т.д.), Wi-Fi, парковка и базовое обслуживание.
+							</div>
+						</details>
+					</div>
+				</div>
+			</section>
+
+			<div class="section_divider section"></div>
+		</main>
+		<div id="map-pop" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+					<div class="popup__title title_h2 title">Как добраться</div>
+					<div class="popup__img">
+						<img class="ibg" src="img/main/popups/map.webp" alt="Image">
+					</div>
+					<div class="popup__text text">
+						<strong>Дорога из Минска в загородный комплекс “Шишки”</strong>
+						<ul>
+							<li>Съедьте с кольцевой дороги на&nbsp;Слуцкое шоссе и&nbsp;продолжите движение по&nbsp;слуцкой
+								трассе
+							</li>
+							<li>Через 45&nbsp;км поверните направо, следуя указателю «Узда.Негорелое». Продолжите движение по
+								данной
+								дороге.
+							</li>
+							<li>Поверните налево на проселочную дорогу, следуя указателям «Шишки» и&nbsp;«Загорщина"</li>
+							<li>На развилке поверните налево, следуя указателю «Шишки"</li>
+							<li>Поверните еще раз налево, следуя указателю «Шишки"</li>
+							<li>Добро пожаловать в «Шишки"</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="reservation" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+					<div class="form">
+						<h2 class="form__title title title_h2">
+							Забронитовать? <br>
+							Мы с&nbsp;радостью поможем вам
+						</h2>
+						<div class="form__text">
+							<p><strong> Позвольте нам сделать ваш отдых незабываемым!</strong></p>
+							<p> Оставьте свои контакты и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время.</p>
+						</div>
+						<div class="form__wrapper">
+							<form action="">
+								<div class="form__inner">
+									<div class="form__row">
+										<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="+ 375 (__) ___-__-__">
+									</div>
+									<div class="form__row">
+										<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="Ваше имя">
+									</div>
+									<div class="form__row form__row_checkbox">
+										<div class="checkbox">
+											<input id="pd_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="pd_1" class="checkbox__label">
+												<span class="checkbox__text">Нажимая на кнопку, вы соглашаетесь с <a href="">договором-оферты</a> и <a href="">политикой обработки</a> и <a href="">защиты персональных данных</a>.</span>
+											</label>
+										</div>
+										<div class="checkbox">
+											<input id="pd_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="pd_2" class="checkbox__label">
+												<span class="checkbox__text">Нажимая на кнопку, вы соглашаетесь на&nbsp;рассылку акционных предложений</span>
+											</label>
+										</div>
+									</div>
+									<div class="form__row">
+										<button class="form__button button" type="submit">Оставить заявку</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="call" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#close"></use>
+						</svg>
+					</button>
+					<div class="form">
+						<h2 class="form__title title title_h2">
+							Написать нам
+						</h2>
+						<div class="form__text">
+							Оставьте свои контакты и&nbsp;сообщение, наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время.
+						</div>
+						<div class="form__wrapper">
+							<form action="">
+								<div class="form__inner">
+									<div class="form__row">
+										<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="+ 375 (__) ___-__-__">
+									</div>
+									<div class="form__row">
+										<input class="form__input input" autocomplete="off" type="text" name="form[]" placeholder="Ваше имя">
+									</div>
+									<div class="form__row form__row_checkbox">
+										<div class="checkbox">
+											<input id="cd_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="cd_1" class="checkbox__label">
+												<span class="checkbox__text">Нажимая на кнопку, вы соглашаетесь с <a href="">договором-оферты</a> и <a href="">политикой обработки</a> и <a href="">защиты персональных данных</a>.</span>
+											</label>
+										</div>
+										<div class="checkbox">
+											<input id="cd_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="cd_2" class="checkbox__label">
+												<span class="checkbox__text">Нажимая на кнопку, вы соглашаетесь на&nbsp;рассылку акционных предложений</span>
+											</label>
+										</div>
+									</div>
+									<div class="form__row">
+										<button class="form__button button" type="submit">Оставить заявку</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="footer__top top-footer">
+				<div class="top-footer__container">
+					<div class="top-footer__col">
+						<div class="top-footer__col-block">
+							<a href="/" class="top-footer__logo logo"><img src="img/logo_w.svg" alt="Logo"></a>
+							<div class="top-footer__text">Создаем теплую атмосферу
+								и&nbsp;дарим радостные эмоции
+							</div>
+						</div>
+						<div class="top-footer__messengers">
+							<div class="messengers">
+								<a href="" class="messengers__item messengers__item_tg">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#tg"></use>
+									</svg>
+								</a>
+								<a href="" class="messengers__item messengers__item_viber">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#viber"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="top-footer__contacts">
+							<a href="tel:+375291865555" class="top-footer-contact">+375 (29) 186-55-55</a>
+							<a href="tel:+375293147503" class="top-footer-contact">+375 (29) 314-75-03</a>
+							<a href="tel:+375291730405" class="top-footer-contact top-footer-contact_column">
+								<small>Для корпоративного отдыха</small>
+								+375 (29) 173-04-05
+							</a>
+						</div>
+						<a href="mailto:info@shishki.info" class="top-footer__mail">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#mail"></use>
+							</svg>
+							E-mail:info@shishki.info
+						</a>
+					</div>
+					<div class="top-footer__col" data-spoilers="479.98">
+						<div class="top-footer__title" data-spoiler>Меню</div>
+						<ul class="top-footer__menu">
+							<li><a href="">О нас</a></li>
+							<li><a href="">Блог</a></li>
+							<li><a href="">Вопрос-ответ</a></li>
+							<li><a href="">Условия оплаты</a></li>
+							<li><a href="">Галерея</a></li>
+							<li><a href="">3D-тур </a></li>
+							<li><a href="">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="top-footer__col" data-spoilers="479.98">
+						<div class="top-footer__title" data-spoiler>Услуги и цены</div>
+						<ul class="top-footer__menu">
+							<li><a href="">Проживание</a></li>
+							<li><a href="">Ресторан</a></li>
+							<li><a href="">Баня</a></li>
+							<li><a href="">Аренда беседок</a></li>
+							<li><a href="">Активный отдых</a></li>
+							<li><a href="">Корпоративы</a></li>
+							<li><a href="">Праздники</a></li>
+							<li><a href="">Свадьбы</a></li>
+							<li><a href="">Бизнес-мероприятия</a></li>
+							<li><a href="">Трансфер</a></li>
+							<li><a href="">Спецпредложения</a></li>
+						</ul>
+					</div>
+					<div class="top-footer__col" data-spoilers="479.98">
+						<div class="top-footer__col-item">
+							<div class="top-footer__title" data-spoiler>Адрес базы:</div>
+							<div class="top-footer__block">
+								<div class="top-footer__info">
+									<p>ООО «Мюзле»</p>
+									<p>
+										223412, Минская область, Узденский район, д.&nbsp;Загорщина, Республика Беларусь, Слободской
+										сельский совет
+									</p>
+									<p>
+										УНП&nbsp;692038156
+									</p>
+									<p>Режим работы: круглосуточно</p>
+								</div>
+								<button class="top-footer-contact" type="button"  data-popup="#map-pop">Как добраться ?</button>
+							</div>
+						</div>
+						<div class="top-footer__col-item">
+							<div class="top-footer__title" data-spoiler>Адрес офиса:</div>
+							<div class="top-footer__block">
+								<div class="top-footer__info">
+									<p>Минск, ул. Марьевская, 7А, офис 12</p>
+									<p>
+										Режим работы: пн-пт, 9:00-18:00
+									</p>
+									<p>
+										Email почта для корпоративных запросов: <a href="mailto:korporativnaya.shishki.info@yandex.ru">korporativnaya.shishki.info@yandex.ru</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="top-footer__col">
+						<div class="top-footer__design">
+							<div class="top-footer__design-info">
+								<div class="top-footer__design-text"> Дизайн и разработка сайта:</div>
+								<a href="" class="top-footer__design-link">Like<span>it</span>.pro</a>
+							</div>
+							<div class="top-footer__design-copy">
+								© 2024
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom bottom-footer">
+				<div class="bottom-footer__container">
+					<a href="" class="bottom-footer__link">Правила оказания услуг</a>
+					<a href="" class="bottom-footer__link">Пользовательское соглашение</a>
+					<a href="" class="bottom-footer__link">Политика конфиденциальности</a>
+					<a href="" class="bottom-footer__link">Согласие на&nbsp;обработку персональных данных</a>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<script src="js/common.js?_v=1.0"></script>
+	<script src="js/popup.js?_v=1.0"></script>
+	<script src="js/swiper.js?_v=1.0"></script>
+	<script src="js/spoiler.js?_v=1.0"></script>
+</body>
+
+</html>

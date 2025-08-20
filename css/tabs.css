@@ -1,0 +1,50 @@
+.tabs {
+    position: relative;
+    z-index: 2
+}
+.tabs__navigation {
+    display: inline-flex;
+    background-color: var(--secondary);
+    border-radius: .625rem;
+    margin-bottom: 3.5rem
+}
+.tabs_border .tabs__navigation {
+    border: 1px solid var(--border)
+}
+.tabs__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 13.9375rem;
+    min-height: 3.75rem;
+    font-weight: 500;
+    font-size: .9375rem;
+    padding: .625rem .9375rem;
+    border-radius: .625rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+    transition: background-color .3s ease-in-out,color .3s ease-in-out
+}
+.tabs__title._tab-active {
+    color: var(--secondary);
+    background-color: var(--accent)
+}
+@media (max-width:47.99875em) {
+    .tabs__navigation {
+        margin-bottom: 2.5rem;
+        display: flex
+    }
+    .exercises .tabs__title {
+        flex: 1 1 46%
+    }
+    .tabs_border .tabs__title {
+        flex: 1 1 30%
+    }
+}
+@media (max-width:29.99875em) {
+    .tabs__title {
+        min-height: 2.5rem;
+        font-size: .75rem;
+        font-weight: 700
+    }
+}

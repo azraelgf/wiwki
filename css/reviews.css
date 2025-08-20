@@ -1,0 +1,129 @@
+.reviews__navigation {
+    margin-bottom: 3.5rem
+}
+.reviews__items {
+    display: grid;
+    gap: 2.5rem
+}
+.review {
+    border-radius: 1.25rem;
+    padding: 2.5rem 1.375rem;
+    background-color: var(--grey)
+}
+.review__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem
+}
+.review__top-left {
+    align-items: center;
+    display: flex;
+    gap: 1.5625rem
+}
+.review__top-date {
+    font-size: .9375rem
+}
+.review__top-body {
+    display: grid;
+    gap: .625rem
+}
+.review__icon {
+    flex: 0 0 4.75rem;
+    width: 4.75rem;
+    height: 4.75rem
+}
+.review__user {
+    font-size: 1rem;
+    font-weight: 600
+}
+.review__title {
+    margin-bottom: 1.5rem
+}
+.review__text {
+    margin-bottom: 3.5rem
+}
+.review__gallery {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.25rem
+}
+.review__gallery-item img {
+    border-radius: 1.25rem
+}
+.rating {
+    display: flex;
+    align-items: center;
+    gap: .5rem
+}
+.rating__inner {
+    display: flex;
+    gap: .5rem
+}
+.rating__item {
+    flex: 0 0 1.25rem;
+    color: var(--accent)
+}
+.rating__item svg {
+    width: 1.25rem;
+    height: 1.25rem
+}
+.rating__value {
+    font-size: 1.125rem
+}
+@media (min-width:61.99875em) {
+    .review__body {
+        padding-left: 6.3125rem;
+        padding-right: 6.3125rem
+    }
+}
+@media (max-width:47.99875em) {
+    .reviews__navigation {
+        margin-bottom: 3rem
+    }
+    .reviews__items {
+        gap: 2rem
+    }
+    .review {
+        padding: 1.875rem 1.25rem
+    }
+    .review__top-date {
+        font-size: .875rem
+    }
+    .review__icon {
+        flex: 0 0 3.25rem;
+        width: 3.25rem;
+        height: 3.25rem
+    }
+    .review__user {
+        font-size: .875rem
+    }
+    .review__text {
+        margin-bottom: 1.5rem
+    }
+    .review__gallery {
+        gap: 1rem;
+        grid-template-columns: repeat(3,1fr)
+    }
+    .rating__value {
+        font-size: 1rem
+    }
+}
+@media (max-width:29.99875em) {
+    .reviews__items {
+        margin: 0 -.9375rem
+    }
+    .review {
+        padding: 1.5rem 1rem
+    }
+    .review__top-date {
+        font-size: .75rem
+    }
+    .review__gallery {
+        grid-template-columns: repeat(2,1fr)
+    }
+    .review__gallery-item img {
+        border-radius: 1rem
+    }
+}
