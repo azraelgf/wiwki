@@ -192,6 +192,10 @@ h6 {
   min-width: 16.25rem;
   min-height: 2.8125rem
 }
+.button.exercises-items__more,
+.button.offers__more {
+  border-color: #000
+}
 input[type=email],
 input[type=tel],
 input[type=text],
@@ -219,6 +223,9 @@ textarea {
 }
 .popup .input {
   border: 1px solid var(--primary)
+}
+.dark-block .input {
+  color: var(--primary)
 }
 .input[placeholder]:not([data-placeholder-nohiden])::-webkit-input-placeholder {
   -webkit-transition: opacity .3s;
@@ -327,6 +334,11 @@ textarea.input {
 .text-accent_dark .text-accent__icon {
   color: var(--primary)
 }
+.info-restaurants__text-icon.text-accent_dark .text-accent__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 1.5rem
+}
 .text-accent+.text-accent {
   margin-top: 1rem
 }
@@ -430,6 +442,11 @@ textarea.input {
 .btn-group__btn {
   min-width: 13.9375rem
 }
+@media (min-width:29.99875em) {
+  .text-accent.info-restaurants__text-icon.text-accent_dark {
+    align-items: center
+  }
+}
 @media (min-width:96.25em) {
   [class*=__container] {
     padding: 0 1.875rem
@@ -465,6 +482,12 @@ textarea.input {
   }
   .section.section_marquez {
     padding-top: 6.25rem
+  }
+}
+@media (max-width:74.99875em) {
+  .slide-house .price-btn {
+    min-height: 3.75rem;
+    padding: .625rem .75rem
   }
 }
 @media (max-width:61.99875em) {
@@ -572,8 +595,12 @@ textarea.input {
   }
   .text-accent {
     font-size: .75rem;
-    gap: .5rem;
-    align-items: flex-start
+    gap: .5rem
+  }
+  .info-restaurants__text-icon.text-accent_dark .text-accent__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: 0 0 1.25rem
   }
   .text-accent.text-accent_xl {
     font-size: .75rem
@@ -621,9 +648,14 @@ textarea.input {
     color: var(--secondary)
   }
   .button_outline:hover {
-    color: var(--secondary)
+    color: var(--secondary);
+    border-color: var(--inverse)
   }
   .button.button_shadow:hover {
     box-shadow: 0 8px 10px 0 rgba(224,102,24,.2)
+  }
+  .button.exercises-items__more:hover,
+  .button.offers__more:hover {
+    border-color: var(--inverse)
   }
 }

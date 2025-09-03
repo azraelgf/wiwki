@@ -45,7 +45,8 @@
     gap: .3125rem;
     align-items: flex-end;
     font-size: 5.625rem;
-    font-weight: 600
+    font-weight: 600;
+    line-height: 1.3666666667
 }
 .numbers-benefits__text {
     font-size: 1.125rem

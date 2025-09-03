@@ -50,17 +50,11 @@
     transition: color .3s ease-in-out
 }
 @media (max-width:96.25em) {
-    .slider-arrow {
-        padding: 0 1.25rem
-    }
     .offer-item__title {
         font-size: 1.125rem
     }
 }
 @media (max-width:47.99875em) {
-    .slider-arrow {
-        padding: 0
-    }
     .offer-item {
         min-height: 16.25rem
     }

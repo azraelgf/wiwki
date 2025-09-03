@@ -33,7 +33,7 @@
   gap: 1.25rem
 }
 .hero__promotion {
-  position: relative
+  position: relative;
 }
 .hero__text {
   font-size: 1.125rem;
@@ -84,7 +84,9 @@
   align-items: center;
   padding: .25rem;
   background-color: var(--secondary);
-  border-radius: 1.25rem
+  border-radius: 1.25rem;
+  max-width: 21.5rem;
+  justify-content: space-between;
 }
 .promotion__info {
   padding: .875rem
@@ -278,7 +280,6 @@
 }
 .restaurants__img {
   display: flex;
-  flex-direction: column;
   gap: 1.25rem;
   flex: 0 0 42%
 }
@@ -340,8 +341,7 @@
 .bath__container {
   display: flex;
   justify-content: space-between;
-  gap: 3.75rem;
-  align-items: flex-start
+  gap: 3.75rem
 }
 .bath__info {
   display: flex;
@@ -423,10 +423,8 @@
   .hero__text {
     max-width: 56.875rem
   }
-}
-@media (min-width:96.25em) {
-  [class*=__container] {
-    padding: 0 1.875rem
+  .restaurants__img {
+    flex-direction: column
   }
 }
 @media (min-width:120em) {
@@ -484,6 +482,9 @@
   .bath__container {
     gap: 2.5rem
   }
+  .bath__info-block {
+    font-size: 1rem
+  }
   .offers__title-img {
     translate: -50% 0
   }
@@ -505,26 +506,7 @@
     padding-top: 3.75rem
   }
   .about__container {
-    gap: 1.5rem
-  }
-  .about__img {
-    flex: 0 0 46%
-  }
-  .check-house {
-    padding-bottom: 5rem
-  }
-  .check-house__text {
-    margin-bottom: 2.5rem
-  }
-  .restaurants__container {
-    gap: 1.5rem
-  }
-  .restaurants__img-item strong {
-    font-size: 1.625rem
-  }
-}
-@media (max-width:51.24875em) {
-  .about__container {
+    gap: 1.5rem;
     flex-wrap: wrap
   }
   .about__img {
@@ -533,11 +515,17 @@
   .about__img img {
     max-height: 25rem
   }
+  .check-house {
+    padding-bottom: 5rem
+  }
+  .check-house__text {
+    margin-bottom: 2.5rem
+  }
   .restaurants__container {
+    gap: 1.5rem;
     flex-wrap: wrap
   }
   .restaurants__img {
-    flex-direction: row;
     flex: 1 1 100%
   }
   .restaurants__img img {
@@ -546,11 +534,14 @@
   .restaurants__img-item {
     flex: 1 1 46%
   }
+  .restaurants__img-item strong {
+    font-size: 1.625rem
+  }
   .bath__container {
     flex-wrap: wrap
   }
   .bath__img {
-    flex: 1 1 auto
+    flex: 1 1 100%
   }
   .bath__img img {
     max-height: 25rem
@@ -624,7 +615,7 @@
     gap: 1.5rem
   }
   .bath__info-block {
-    font-size: 1rem
+    font-size: .875rem
   }
   .bath__title {
     margin-bottom: 1rem
@@ -649,9 +640,6 @@
   }
 }
 @media (max-width:29.99875em) {
-  [class*=__container] {
-    padding: 0 .9375rem
-  }
   .hero {
     padding-bottom: 2.5rem
   }
@@ -679,6 +667,9 @@
   }
   .hero-link span {
     font-size: .75rem
+  }
+  .numbers__num {
+    font-size: 2.5rem
   }
   .numbers__text {
     font-size: .75rem
@@ -720,7 +711,8 @@
     border-radius: .5rem
   }
   .restaurants__img-item strong {
-    font-size: 1rem
+    font-size: 1rem;
+    max-width: 9.375rem
   }
   .info-restaurants__text {
     font-size: .75rem

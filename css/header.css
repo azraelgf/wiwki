@@ -218,7 +218,7 @@
     pointer-events: auto
   }
   .menu__link {
-    padding-bottom: 1rem
+    padding-bottom: 1.25rem
   }
   .menu__link::before {
     content: "";
@@ -273,7 +273,7 @@
   }
   .header__bottom {
     border-top: 1px solid var(--border);
-    padding-top: .9375rem;
+    padding-top: 1.25rem;
     position: relative
   }
   .header__bottom::before {

@@ -65,8 +65,12 @@
   }
 }
 @media (max-width:61.99875em) {
+  .certificate {
+    flex-wrap: wrap
+  }
   .certificate__left {
-    padding: 1.875rem 1.25rem
+    padding: 1.875rem 1.25rem;
+    flex: 1 1 50%
   }
   .certificate__btn {
     min-width: 100%
@@ -75,16 +79,10 @@
     padding: 1.875rem
   }
   .certificate__dec {
-    width: 2.5rem
+    display: none
   }
 }
 @media (max-width:47.99875em) {
-  .certificate {
-    flex-wrap: wrap
-  }
-  .certificate__left {
-    flex: 1 1 50%
-  }
   .certificate__title {
     margin-bottom: 1rem
   }
@@ -93,9 +91,6 @@
   }
   .certificate__right {
     flex: 1 1 50%
-  }
-  .certificate__dec {
-    display: none
   }
 }
 @media (max-width:29.99875em) {
