@@ -14,18 +14,22 @@
     display: flex;
     gap: 20px;
     justify-content: space-around;
-    min-width: 100%
+    min-width: 100%;
+    will-change: transform; /* добавлено */
+    backface-visibility: hidden; /* добавлено */
+    transform: translateZ(0); /* добавлено */
 }
 .marquee__item {
     flex: 0 0 auto;
     display: flex;
     margin: 10px 0;
-    transition: all .1s ease-in-out
+    transition: transform .1s ease-in-out; /* лучше не "all" */
 }
-.marquee {
+.loaded .marquee {
     -webkit-animation: scroll 200s linear infinite;
     animation: scroll 200s linear infinite
 }
+
 @-webkit-keyframes scroll {
     from {
         -webkit-transform: translateX(0);
@@ -36,6 +40,7 @@
         transform: translateX(calc(-100% - 20px))
     }
 }
+
 @keyframes scroll {
     from {
         -webkit-transform: translateX(0);
@@ -46,12 +51,14 @@
         transform: translateX(calc(-100% - 20px))
     }
 }
-@media (max-width:96.25em) {
+
+@media (max-width: 96.25em) {
     .marquee__item img {
         width: 90rem
     }
 }
-@media (max-width:47.99875em) {
+
+@media (max-width: 47.99875em) {
     .section__marquez {
         display: none
     }
