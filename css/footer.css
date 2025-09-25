@@ -279,6 +279,9 @@
     .top-footer__info p+p {
         margin-top: .75rem
     }
+    .footer_fixed .bottom-footer {
+        padding-bottom: 12.5rem
+    }
 }
 @media (max-width:35.99875em) {
     .bottom-footer__link {
@@ -339,6 +342,9 @@
     }
     .bottom-footer {
         padding: 1.6875rem 0
+    }
+    .footer_fixed .bottom-footer {
+        padding-bottom: 10.625rem
     }
 }
 @media (any-hover:hover) {

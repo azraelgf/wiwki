@@ -7,8 +7,8 @@
     overflow-x: auto;
     padding-bottom: .3125rem
 }
-.page-navigation_reviews .page-navigation__list ,.page-navigation_blog .page-navigation__list{
-    gap: 0
+.page-navigation_reviews .page-navigation__list {
+    gap: .3125rem
 }
 .page-navigation__link {
     display: flex;
@@ -24,7 +24,7 @@
     border: 1px solid var(--border);
     transition: background-color .3s ease-in-out,color .3s ease-in-out
 }
-.page-navigation_reviews .page-navigation__link,.page-navigation_blog .page-navigation__link{
+.page-navigation_reviews .page-navigation__link {
     min-width: 6.25rem;
     border: none
 }
@@ -39,8 +39,8 @@
     .page-navigation__list {
         gap: 1rem
     }
-    .page-navigation_reviews .page-navigation__list,.page-navigation_blog .page-navigation__list{
-        gap: 0
+    .page-navigation_reviews .page-navigation__list {
+        gap: 1rem
     }
 }
 @media (max-width:29.99875em) {

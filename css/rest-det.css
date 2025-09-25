@@ -1,5 +1,5 @@
 .rest-detail__title {
-    margin-bottom: 4.375rem
+    margin-bottom: 3.125rem
 }
 .rest-detail__slider {
     margin-bottom: 3.75rem
@@ -37,7 +37,7 @@
 .bar-list__item {
     display: flex;
     justify-content: space-between;
-    padding-bottom: .5rem;
+    padding-bottom: .75rem;
     border-bottom: 1px solid var(--border-btn)
 }
 .bar-list__item-info {
@@ -53,12 +53,16 @@
 }
 .bar-list__item-price {
     display: grid;
-    gap: .5rem;
+    gap: .25rem;
     text-align: right;
     font-weight: 700
 }
+.bar-list__item-price strong {
+    padding-right: 1rem
+}
 .bar-list__item-price small {
-    font-weight: 300
+    font-weight: 300;
+    text-align: center
 }
 @media (min-width:47.99875em) {
     .detail-call__btn {

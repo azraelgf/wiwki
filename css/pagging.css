@@ -12,10 +12,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #000
-}
-.pagging__arrow._disabled {
-    border-color: var(--border)
+    border: 1px solid var(--border);
+    transition: border-color .3s ease-in-out
 }
 .pagging__arrow svg {
     width: .625rem;
@@ -53,6 +51,9 @@
     }
 }
 @media (any-hover:hover) {
+    .pagging__arrow:hover {
+        border-color: #000
+    }
     .pagging__item:hover {
         border-color: var(--accent);
         color: var(--secondary);

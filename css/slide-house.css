@@ -67,10 +67,6 @@
 .accommodation__items .slide-house:not(:last-child) {
     padding-bottom: 4.5rem
 }
-.accommodation__items .slide-house+.accommodation__items .slide-house {
-    padding-top: 4.5rem;
-    border-top: 1px solid var(--border)
-}
 @media (max-width:96.25em) {
     .slide-house__title {
         font-size: 1.625rem
@@ -128,9 +124,6 @@
     }
     .accommodation__items .slide-house:not(:last-child) {
         padding-bottom: 2rem
-    }
-    .accommodation__items .slide-house+.accommodation__items .slide-house {
-        padding-top: 2rem
     }
 }
 @media (max-width:29.99875em) {

@@ -31,6 +31,7 @@
     margin-bottom: 3rem
 }
 .road__address {
+    line-height: 1.4;
     display: flex;
     align-items: center;
     font-weight: 600;
@@ -47,16 +48,14 @@
 }
 @media (max-width:74.99875em) {
     .contacts {
-        flex-wrap: wrap
+        flex-wrap: wrap;
+        gap: 1.875rem 1.25rem
     }
-    .contacts__item {
-        flex: 1 1 auto
-    }
-}
-@media (max-width:61.99875em) {
     .contacts__item {
         flex: 1 1 46%
     }
+}
+@media (max-width:61.99875em) {
     .contacts__item-title {
         font-size: 1.25rem
     }

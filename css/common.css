@@ -321,7 +321,7 @@ textarea.input {
   gap: .9375rem;
   font-size: 1rem;
   font-weight: 600;
-  line-height: 1.3
+  line-height: 1.5
 }
 .text-accent__icon {
   color: var(--inverse);
@@ -363,6 +363,16 @@ textarea.input {
   margin-bottom: 3.5rem
 }
 .section__title {
+  margin-bottom: 1.5rem
+}
+.section__block-title .section__title {
+  margin-bottom: 0
+}
+.section__block-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .625rem;
   margin-bottom: 1.5rem
 }
 .section__text {
@@ -451,6 +461,8 @@ textarea.input {
   [class*=__container] {
     padding: 0 1.875rem
   }
+}
+@media (min-width:100em) {
   .section::after,
   .section::before {
     content: "";
@@ -536,6 +548,13 @@ textarea.input {
   .section__top {
     margin-bottom: 2rem
   }
+  .section__block-title .section__title {
+    flex: 1 1 100%;
+    order: 2
+  }
+  .section__block-title {
+    flex-wrap: wrap
+  }
   .section.section_marquez {
     padding-top: 4.5rem
   }
@@ -554,7 +573,8 @@ textarea.input {
   .price-btn {
     font-size: .875rem;
     min-width: 100%;
-    min-height: 3.125rem
+    min-height: 3.125rem;
+    padding: .625rem 1.25rem
   }
   .price-btn span {
     font-size: 1rem
@@ -562,6 +582,10 @@ textarea.input {
   .btn-group__btn {
     min-width: initial;
     flex: 1 1 46%
+  }
+  .restaurants-page__action .btn-group__btn {
+    min-width: 11.5rem;
+    flex: 0 0 auto
   }
 }
 @media (max-width:29.99875em) {
@@ -609,6 +633,12 @@ textarea.input {
     padding-top: 2rem
   }
   .section__title {
+    margin-bottom: 1rem
+  }
+  .section__block-title .section__title {
+    margin-bottom: 0
+  }
+  .section__block-title {
     margin-bottom: 1rem
   }
   .section__img img {
